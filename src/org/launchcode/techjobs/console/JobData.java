@@ -34,7 +34,7 @@ public class JobData {
         loadData();
 
         ArrayList<String> values = new ArrayList<>();
-
+        //  returns an arrayList containing all values only one time.
         for (HashMap<String, String> row : allJobs) {
             String aValue = row.get(field);
 
@@ -58,6 +58,7 @@ public class JobData {
 
         ArrayList<HashMap<String, String>> searchJobs = new ArrayList<>();
 
+            //iterate through jobs, the column and search for searchTerm
             for (HashMap<String, String> row : allJobs) {
                 for (String column : row.keySet()) {
                     String oneValue = row.get(column);
@@ -89,7 +90,7 @@ public class JobData {
         loadData();
 
         ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
-
+        // search a specific column for a specific value.
         for (HashMap<String, String> row : allJobs) {
 
             String aValue = row.get(column);

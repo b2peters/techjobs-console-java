@@ -60,6 +60,7 @@ public class TechJobs {
                 System.out.println("\nSearch term: ");
                 String searchTerm = in.nextLine();
 
+                // Print all jobs fully
                 if (searchField.equals("all")) {
                     printJobs(JobData.findByValue(searchTerm));
                 } else {
@@ -111,7 +112,7 @@ public class TechJobs {
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
         if (someJobs.size()<1) {
-            System.out.println("Sorry, I got nothing.");
+            System.out.println("No jobs match this search");
         }
         for (HashMap<String, String> job : someJobs) {
             System.out.println("***\n");
